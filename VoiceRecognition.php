@@ -53,14 +53,14 @@ class callWatson{
 			CURLOPT_URL             => $this->url,
 			CURLOPT_RETURNTRANSFER  => TRUE,
 			CURLOPT_SSL_VERIFYPEER  => TRUE,
-			CURLOPT_USERPWD 		=> $this->user_password,
+			CURLOPT_USERPWD 	=> $this->user_password,
 			CURLOPT_HTTPHEADER      => $this->header,
 			CURLOPT_POST            => $post,
-			CURLOPT_POSTFIELDS		=> $bytes,
+			CURLOPT_POSTFIELDS	=> $bytes,
 			CURLOPT_INFILESIZE      => $filesize,
-			CURLOPT_VERBOSE			=> TRUE,
-			CURLOPT_CONNECTTIMEOUT => 260,         
-			CURLOPT_TIMEOUT        => 260,           
+			CURLOPT_VERBOSE		=> TRUE,
+			CURLOPT_CONNECTTIMEOUT  => 260,         
+			CURLOPT_TIMEOUT         => 260,           
 		));
 
 		$result = curl_exec($ch);
@@ -94,5 +94,6 @@ $callWatson = new callWatson();
 
 $callWatson->getAutentication();
 $callWatson->setRecognize();
+//$callWatson->setModels();
 $callWatson->Curl();
 ?>
