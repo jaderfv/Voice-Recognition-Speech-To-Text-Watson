@@ -10,8 +10,8 @@ class Recognize{
 	public function setFile(){
 		$filename = "c:\\xampp\htdocs\VoiceRecognition\audio\audio-file.flac";
 		$file = fopen($filename, 'r');
-        $this->filesize = filesize($filename);
-        $this->bytes = fread($file,$this->filesize);
+        	$this->filesize = filesize($filename);
+        	$this->bytes = fread($file,$this->filesize);
 
 	}
 	public function callRecognize($user_password, $query){
@@ -39,7 +39,7 @@ class Recognize{
 			CURLOPT_INFILESIZE      => $this->filesize,
 			CURLOPT_VERBOSE			=> TRUE,
 			CURLOPT_CONNECTTIMEOUT => 260,         
-	        CURLOPT_TIMEOUT        => 260,           
+	        	CURLOPT_TIMEOUT        => 260,           
 		));
 
 		$result = curl_exec($ch);
