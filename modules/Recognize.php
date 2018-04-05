@@ -32,14 +32,14 @@ class Recognize{
 			CURLOPT_URL             => $this->url,
 			CURLOPT_RETURNTRANSFER  => TRUE,
 			CURLOPT_SSL_VERIFYPEER  => TRUE,
-			CURLOPT_USERPWD 		=> $user_password,
+			CURLOPT_USERPWD 	=> $user_password,
 			CURLOPT_HTTPHEADER      => $this->header,
 			CURLOPT_POST            => 1,
-			CURLOPT_POSTFIELDS		=> $this->bytes,
+			CURLOPT_POSTFIELDS	=> $this->bytes,
 			CURLOPT_INFILESIZE      => $this->filesize,
-			CURLOPT_VERBOSE			=> TRUE,
-			CURLOPT_CONNECTTIMEOUT => 260,         
-	        	CURLOPT_TIMEOUT        => 260,           
+			CURLOPT_VERBOSE		=> TRUE,
+			CURLOPT_CONNECTTIMEOUT  => 260,         
+	        	CURLOPT_TIMEOUT         => 260,           
 		));
 
 		$result = curl_exec($ch);
